@@ -1,0 +1,69 @@
+
+:root{
+  --bg:#090a0f;
+  --card:#11121a;
+  --gold:#fbbf24;
+  --muted:#9aa0a6;
+  --grid:#1a1b25;
+}
+html,body,#__next{height:100%}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  color:#fff;
+  background: radial-gradient(circle at 50% -20%, rgba(255,196,0,.15), transparent 35%),
+              radial-gradient(circle at 0% 20%, rgba(255,196,0,.09), transparent 35%),
+              radial-gradient(circle at 100% 10%, rgba(255,196,0,.09), transparent 35%),
+              linear-gradient(180deg,#0a0b11 0%, #05060a 100%);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+/* lightning vibe */
+.bg-bolts{
+  position:fixed; inset:0; z-index:0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,225,120,.15) 0, rgba(255,225,120,0) 35%),
+    radial-gradient(circle at 70% 25%, rgba(255,225,120,.12) 0, rgba(255,225,120,0) 35%),
+    radial-gradient(circle at 50% 60%, rgba(255,225,120,.10) 0, rgba(255,225,120,0) 35%);
+  pointer-events:none;
+}
+/* watermark */
+.watermark{
+  position:fixed; inset:0; z-index:0; opacity:.06;
+  background-image:url('/logo.png');
+  background-position:center; background-size:60%; background-repeat:no-repeat;
+  pointer-events:none; filter:blur(0.4px);
+}
+
+.container{max-width:1180px; margin:28px auto; padding:0 18px; position:relative; z-index:1}
+.header{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 0}
+.brand{display:flex; align-items:center; gap:10px}
+.brand img{height:46px}
+.title{font-size:30px; font-weight:900; letter-spacing:1px}
+.right{display:flex; align-items:center; gap:10px}
+.btn{background:var(--gold); border:none; color:#000; padding:8px 12px; border-radius:10px; font-weight:800; cursor:pointer}
+.btn.ghost{background:transparent; border:1px solid rgba(255,255,255,.2); color:#fff}
+.link{background:#20222e; color:#fff; padding:8px 12px; border-radius:10px; text-decoration:none}
+.discord{background:#5865F2; color:#fff; text-decoration:none; padding:8px 12px; border-radius:10px}
+
+.headline{font-size:36px; text-align:center; margin:8px 0 4px}
+.sub{color:var(--muted); text-align:center}
+
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(270px,1fr)); gap:16px; margin-top:18px}
+.card{position:relative; background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.07); border-radius:14px; padding:14px; overflow:hidden}
+.card::after{content:""; position:absolute; inset:0; background-image:url('/logo.png'); background-repeat:no-repeat; background-position:96% 92%; background-size:140px; opacity:.035; pointer-events:none}
+.muted{color:#a1a1aa}
+.stats{display:flex; gap:16px; margin-top:10px}
+.stat{font-weight:800; font-size:18px}
+.badge{display:inline-block; background:#10121a; padding:4px 8px; border:1px solid rgba(255,255,255,.12); border-radius:999px; font-size:12px}
+
+.footer{position:fixed; right:10px; bottom:10px; z-index:2; color:#d1d5db; font-size:11px; opacity:.9}
+small.footer a{color:#9db4ff}
+
+.input, select{background:#0f1118; border:1px solid #202432; color:#fff; padding:10px; border-radius:10px}
+.form-row{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px}
+
+.table{width:100%; border-collapse:collapse; margin-top:10px}
+.table th,.table td{border-bottom:1px solid rgba(255,255,255,.08); padding:8px; text-align:left}
+.win{color:#22c55e}.loss{color:#ef4444}.push{color:#eab308}
