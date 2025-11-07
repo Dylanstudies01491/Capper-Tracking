@@ -2,7 +2,7 @@
 import useSWR from 'swr';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend, Filler } from 'chart.js';
-import { Shell } from './_components';
+import { Shell } from '../components/Shell';
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend, Filler);
 const fetcher = (u)=>fetch(u).then(r=>r.json());
 
